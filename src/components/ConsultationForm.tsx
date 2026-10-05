@@ -9,7 +9,7 @@ const teamSizes = ["1–10", "11–50", "51–200", "201–1000", "1000+"];
 type Status = "idle" | "pending" | "success" | "error";
 
 const fieldClass =
-  "mt-2 w-full rounded-xl border border-line bg-ink px-4 py-3 text-base text-paper outline-none placeholder:text-mist/70 focus:border-cyan";
+  "mt-2 w-full rounded-xl border border-line bg-ink px-4 py-3 text-base text-paper outline-none placeholder:text-mist/70 focus:border-signal";
 
 export function ConsultationForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -101,7 +101,7 @@ export function ConsultationForm() {
     return (
       <div
         role="status"
-        className="rounded-2xl border border-cyan/40 bg-cyan/10 p-6"
+        className="rounded-2xl border border-signal/40 bg-signal/10 p-6"
       >
         <h3 className="font-display text-3xl text-paper">Request received.</h3>
         <p className="mt-3 text-sm leading-relaxed text-mist">
@@ -183,7 +183,7 @@ export function ConsultationForm() {
       <button
         type="submit"
         disabled={status === "pending"}
-        className="inline-flex min-h-11 w-full items-center justify-center rounded-full bg-cyan px-5 text-sm font-semibold text-ink transition-colors hover:bg-paper disabled:cursor-wait disabled:opacity-70"
+        className="inline-flex min-h-11 w-full items-center justify-center rounded-full bg-signal px-5 text-sm font-semibold text-ink transition-colors hover:bg-paper disabled:cursor-wait disabled:opacity-70"
       >
         {status === "pending" ? "Sending…" : "Request a consultation"}
       </button>

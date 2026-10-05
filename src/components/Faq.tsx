@@ -15,7 +15,7 @@ export function Faq() {
             <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-4 text-left text-base font-semibold text-paper sm:text-lg">
               {item.question}
               <ChevronDown
-                className="size-5 shrink-0 text-cyan transition-transform group-open:rotate-180"
+                className="size-5 shrink-0 text-signal transition-transform group-open:rotate-180"
                 aria-hidden
               />
             </summary>

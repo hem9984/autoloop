@@ -6,7 +6,7 @@ Tickets go in. A durable orchestrator grounds them against the code and the runt
 
 ## Stack
 
-Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS 4, Motion, tsParticles, Lucide.
+Next.js 16 (App Router, static export), React 19, TypeScript, Tailwind CSS 4, Motion, OGL, Lucide.
 
 ## Setup
 
@@ -30,8 +30,8 @@ Open [http://localhost:3000](http://localhost:3000).
 | Command | What it does |
 | --- | --- |
 | `npm run dev` | Local dev server |
-| `npm run build` | Production build |
-| `npm run start` | Serve the production build |
+| `npm run build` | Static export into `out/` |
+| `npx serve out` | Preview the static export |
 | `npm run lint` | ESLint |
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run check:copy` | Fails if product-specific internal names appear in `src`, `public`, or this README |
@@ -42,9 +42,11 @@ Brand strings live in [`src/lib/site.ts`](src/lib/site.ts). Section copy lives i
 
 ## Deploy
 
-Any Node host that can run `next build` and `next start` (Node 20.9+). On Vercel, set the two environment variables above and deploy the repository root. `next.config.ts` sends security headers, including a production content security policy that allows the browser to post the consultation form to `https://api.web3forms.com`.
+GitHub Pages serves the static export. Pushes to `main` run [`.github/workflows/pages.yml`](.github/workflows/pages.yml), which builds with `BASE_PATH` set to the repository name and publishes to `https://<user>.github.io/<repo>/`.
 
-The form is client-side. There is no application server beyond Next.js.
+Set `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` as a repository Actions secret if the consultation form should submit on the hosted site. The form is client-side and posts to `https://api.web3forms.com`.
+
+For a custom domain or a `username.github.io` repository, leave `BASE_PATH` empty so the site is served from `/`. GitHub Pages does not apply custom response headers.
 
 ## Consultation form
 

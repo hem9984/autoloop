@@ -1,4 +1,5 @@
 import { phases, verdicts } from "@/content/phases";
+import SpotlightCard from "@/components/bits/SpotlightCard";
 import { Reveal } from "@/components/Reveal";
 import { Section } from "@/components/Section";
 
@@ -13,8 +14,11 @@ export function Phases() {
       <div className="grid gap-4 lg:grid-cols-2">
         {phases.map((phase, index) => (
           <Reveal key={phase.id} delay={index * 0.05}>
-            <article className="h-full rounded-2xl border border-line bg-panel/80 p-6">
-              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-cyan">
+            <SpotlightCard
+              className="h-full rounded-2xl border border-line bg-panel/80 p-6"
+              spotlightColor="rgba(61, 220, 132, 0.2)"
+            >
+              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-signal">
                 0{index + 1}
               </p>
               <h3 className="mt-2 font-display text-3xl text-paper">{phase.name}</h3>
@@ -33,7 +37,7 @@ export function Phases() {
                   <dd className="mt-1 text-mist">{phase.refuses}</dd>
                 </div>
               </dl>
-            </article>
+            </SpotlightCard>
           </Reveal>
         ))}
       </div>
@@ -66,7 +70,7 @@ export function Phases() {
                   <th scope="row" className="px-4 py-4 font-semibold text-paper">
                     {verdict.name}
                   </th>
-                  <td className="px-4 py-4 text-cyan">{verdict.result}</td>
+                  <td className="px-4 py-4 text-signal">{verdict.result}</td>
                   <td className="px-4 py-4 text-mist">{verdict.meaning}</td>
                 </tr>
               ))}
@@ -77,7 +81,7 @@ export function Phases() {
           {verdicts.map((verdict) => (
             <li key={verdict.name} className="rounded-2xl border border-line p-4">
               <p className="font-semibold text-paper">{verdict.name}</p>
-              <p className="mt-1 text-sm text-cyan">{verdict.result}</p>
+              <p className="mt-1 text-sm text-signal">{verdict.result}</p>
               <p className="mt-2 text-sm leading-relaxed text-mist">
                 {verdict.meaning}
               </p>

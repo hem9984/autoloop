@@ -5,14 +5,17 @@
   --font-display: var(--font-instrument), ui-serif, Georgia, serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
-  --color-ink: #07090f;
-  --color-panel: #10151f;
-  --color-line: #243044;
-  --color-mist: #9aa8bd;
-  --color-paper: #eef3f8;
-  --color-cyan: #3ee0ff;
-  --color-amber: #f5b942;
-  --color-rose: #ff6b8a;
+  --color-ink: #04060a;
+  --color-panel: #0c1410;
+  --color-line: #1a2e22;
+  --color-mist: #a3b5aa;
+  --color-paper: #eef6f1;
+  --color-signal: #3ddc84;
+  --color-amber: #e4c36a;
+  --color-rose: #e06b7a;
+
+  --animate-star-movement-bottom: star-movement-bottom linear infinite alternate;
+  --animate-star-movement-top: star-movement-top linear infinite alternate;
 }
 
 html {
@@ -21,14 +24,18 @@ html {
 }
 
 body {
-  background: var(--color-ink);
+  background-color: var(--color-ink);
+  background-image:
+    linear-gradient(rgba(61, 220, 132, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(61, 220, 132, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
   color: var(--color-paper);
   font-family: var(--font-sans);
 }
 
 ::selection {
-  background: #3ee0ff;
-  color: #07090f;
+  background: #3ddc84;
+  color: #04060a;
 }
 
 summary {
@@ -40,7 +47,7 @@ summary::-webkit-details-marker {
 }
 
 :focus-visible {
-  outline: 2px solid #3ee0ff;
+  outline: 2px solid #3ddc84;
   outline-offset: 3px;
 }
 
@@ -50,14 +57,28 @@ summary::-webkit-details-marker {
   top: -4rem;
   z-index: 80;
   border-radius: 999px;
-  background: #3ee0ff;
-  color: #07090f;
+  background: #3ddc84;
+  color: #04060a;
   padding: 0.6rem 1rem;
   font-weight: 650;
 }
 
 .skip-link:focus {
   top: 1rem;
+}
+
+.instrument-grid {
+  background-image:
+    linear-gradient(to right, rgba(61, 220, 132, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(61, 220, 132, 0.07) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at center, transparent 18%, black 72%);
+}
+
+.cosmos-field canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 @keyframes flow-dash {
@@ -71,12 +92,34 @@ summary::-webkit-details-marker {
   animation: flow-dash 0.9s linear infinite;
 }
 
+@keyframes star-movement-bottom {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes star-movement-top {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100%, 0%);
+    opacity: 0;
+  }
+}
+
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
-  -webkit-text-fill-color: #eef3f8;
-  caret-color: #eef3f8;
-  box-shadow: 0 0 0 1000px #07090f inset;
+  -webkit-text-fill-color: #eef6f1;
+  caret-color: #eef6f1;
+  box-shadow: 0 0 0 1000px #04060a inset;
   transition: background-color 9999s ease-out;
 }
 

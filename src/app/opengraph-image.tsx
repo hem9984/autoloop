@@ -3,6 +3,7 @@ import { ImageResponse } from "next/og";
 export const alt = "AutoLoop — the fully automated software lifecycle";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+export const dynamic = "force-static";
 
 export default function OpenGraphImage() {
   return new ImageResponse(
@@ -14,8 +15,8 @@ export default function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#07090f",
-          color: "#eef3f8",
+          background: "#04060a",
+          color: "#eef6f1",
           padding: "72px",
         }}
       >
@@ -24,7 +25,7 @@ export default function OpenGraphImage() {
             display: "flex",
             fontSize: 28,
             letterSpacing: 8,
-            color: "#3ee0ff",
+            color: "#3ddc84",
           }}
         >
           AUTOLOOP
@@ -38,7 +39,7 @@ export default function OpenGraphImage() {
               marginTop: 28,
               fontSize: 28,
               lineHeight: 1.4,
-              color: "#9aa8bd",
+              color: "#a3b5aa",
               maxWidth: 920,
             }}
           >

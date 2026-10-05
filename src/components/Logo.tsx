@@ -12,14 +12,14 @@ export function Logo({ className = "" }: { className?: string }) {
         <path
           d="M16 7.5c-4.7 0-8.5 3.4-8.5 7.6S11.3 22.7 16 22.7s8.5-3.4 8.5-7.6"
           fill="none"
-          stroke="#3ee0ff"
+          stroke="#3ddc84"
           strokeWidth="2.2"
           strokeLinecap="round"
         />
         <path
           d="M22.8 11.6 25.2 7.6 20.8 8.7"
           fill="none"
-          stroke="#3ee0ff"
+          stroke="#3ddc84"
           strokeWidth="2.2"
           strokeLinecap="round"
           strokeLinejoin="round"

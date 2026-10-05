@@ -21,8 +21,8 @@ export function Cta({
 }: CtaProps) {
   const styles =
     variant === "primary"
-      ? "bg-cyan text-ink hover:bg-paper"
-      : "border border-line bg-ink/60 text-paper hover:border-cyan/70";
+      ? "bg-signal text-ink hover:bg-paper"
+      : "border border-line bg-ink/60 text-paper hover:border-signal/70";
   const display = hideBelowMd ? "hidden md:inline-flex" : "inline-flex";
 
   return (

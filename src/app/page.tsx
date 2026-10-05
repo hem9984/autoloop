@@ -4,7 +4,6 @@ import { Faq } from "@/components/Faq";
 import { Footer } from "@/components/Footer";
 import { Guardrails } from "@/components/Guardrails";
 import { Hero } from "@/components/Hero";
-import { HowItWorks } from "@/components/HowItWorks";
 import { Integrations } from "@/components/Integrations";
 import { Nav } from "@/components/Nav";
 import { Phases } from "@/components/Phases";
@@ -17,7 +16,6 @@ export default function HomePage() {
       <main id="main">
         <Hero />
         <ProofStrip />
-        <HowItWorks />
         <Phases />
         <Capabilities />
         <Guardrails />

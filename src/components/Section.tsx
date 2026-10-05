@@ -24,7 +24,7 @@ export function Section({
     >
       <div className={`mx-auto ${wide ? "max-w-[90rem]" : "max-w-6xl"}`}>
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-[0.22em] text-cyan">
+          <p className="font-mono text-xs uppercase tracking-[0.22em] text-signal">
             {eyebrow}
           </p>
           <h2 className="mt-3 max-w-3xl font-display text-4xl leading-[1.1] text-paper sm:text-5xl">

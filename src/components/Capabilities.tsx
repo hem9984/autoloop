@@ -12,6 +12,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { capabilities, type CapabilityIcon } from "@/content/capabilities";
+import SpotlightCard from "@/components/bits/SpotlightCard";
 import { Reveal } from "@/components/Reveal";
 import { Section } from "@/components/Section";
 
@@ -42,15 +43,18 @@ export function Capabilities() {
           return (
             <li key={item.title}>
               <Reveal delay={index * 0.04} className="h-full">
-                <article className="flex h-full gap-4 rounded-2xl border border-line bg-panel/70 p-5">
-                  <span className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-cyan/30 bg-cyan/10 text-cyan">
+                <SpotlightCard
+                  className="flex h-full gap-4 rounded-2xl border border-line bg-panel/80 p-5"
+                  spotlightColor="rgba(61, 220, 132, 0.22)"
+                >
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-signal/30 bg-signal/10 text-signal">
                     <Icon className="size-5" aria-hidden />
                   </span>
                   <div>
                     <h3 className="text-lg font-semibold text-paper">{item.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-mist">{item.body}</p>
                   </div>
-                </article>
+                </SpotlightCard>
               </Reveal>
             </li>
           );
