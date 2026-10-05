@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://hem9984.github.io/autoloop/sitemap.xml
