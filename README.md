@@ -42,7 +42,7 @@ Brand strings live in [`src/lib/site.ts`](src/lib/site.ts). Section copy lives i
 
 ## Deploy
 
-GitHub Pages serves the static export. Pushes to `main` run [`.github/workflows/pages.yml`](.github/workflows/pages.yml), which builds with `BASE_PATH` set to the repository name and publishes to `https://<user>.github.io/<repo>/`.
+GitHub Pages serves the static export from the `gh-pages` branch at `https://<user>.github.io/<repo>/`. Pushes to `main` run [`.github/workflows/pages.yml`](.github/workflows/pages.yml), which builds with `BASE_PATH` set to the repository name and updates that branch. A `.nojekyll` file is included so Pages serves the `_next` assets.
 
 Set `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` as a repository Actions secret if the consultation form should submit on the hosted site. The form is client-side and posts to `https://api.web3forms.com`.
 
