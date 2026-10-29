@@ -32,6 +32,6 @@ export const faq = [
   {
     question: "How does a rollout start?",
     answer:
-      "Request a consultation. We map repositories, trunk and deploy branches, the quality workflow, telemetry sources, and store accounts, then stand the loop up against that map. The first sweep runs only when you start it.",
+      "Install with the Quickstart command, run delivery-loop init, and point the pack at your repos and tracker. Or request a consultation and we map repositories, trunk and deploy branches, the quality workflow, telemetry sources, and store accounts, then stand the loop up against that map. The first sweep runs only when you start it.",
   },
 ] as const;

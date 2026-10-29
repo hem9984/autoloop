@@ -8,6 +8,7 @@ import { Integrations } from "@/components/Integrations";
 import { Nav } from "@/components/Nav";
 import { Phases } from "@/components/Phases";
 import { ProofStrip } from "@/components/ProofStrip";
+import { Quickstart } from "@/components/Quickstart";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <main id="main">
         <Hero />
         <ProofStrip />
+        <Quickstart />
         <Phases />
         <Capabilities />
         <Guardrails />
