@@ -31,8 +31,8 @@ export function Hero() {
           </GradientText>
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-mist sm:text-lg">
-          Every ticket is grounded against your code, built by a cloud agent,
-          merged on green CI, and closed only when customers have the change.
+          Ticket in intake to development deployed—with nobody at the merge
+          button. Production moves only when you ship.
         </p>
         <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <StarBorder
@@ -48,8 +48,8 @@ export function Hero() {
           >
             {site.cta.label}
           </StarBorder>
-          <Cta href="#phases" variant="secondary" className="w-full sm:w-auto">
-            Read the phases
+          <Cta href="#quickstart" variant="secondary" className="w-full sm:w-auto">
+            Quickstart
           </Cta>
         </div>
       </div>
