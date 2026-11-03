@@ -8,11 +8,12 @@ export const site = {
     "",
   ),
   cta: {
-    href: "#consultation",
+    href: "/#consultation",
     label: "Request a consultation",
   },
   nav: [
-    { href: "#how-it-works", label: "How it works" },
-    { href: "#quickstart", label: "Quickstart" },
+    { href: "/#how-it-works", label: "How it works" },
+    { href: "/#quickstart", label: "Quickstart" },
+    { href: "/docs/", label: "Docs" },
   ],
 } as const;
